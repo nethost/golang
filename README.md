@@ -1,28 +1,17 @@
-# alpine
-alpine linux system for deploy application, 
-include ca-certificates tzdata.
+# Golang Images
 
-## 辅助命令
+- development use *-ubuntu;
+- production use *-alpine;
+- alpine:3.8
+
+## 1.9
+
 ```
-$ docker-compose up -d
-$ docker-compose ps
-$ docker pull nethost/golang:latest
-```
+$ docker build -t=nethost/golang:1.9-alpine .
+$ docker push nethost/golang:1.9-alpine
+$ docker pull nethost/golang:1.9-alpine
 
-## 相关辅助命令
-```
-$ docker ps -l
-
-$ docker stop $(docker ps -a -q)
-$ docker rm $(docker ps -a -q)
-
-$ docker rmi $(docker images -q)
-$ docker rmi $(docker images -q -f dangling=true)
-
-$ docker volume ls
-$ docker volume rm $(docker volume ls -q)
-$ docker volume rm $(docker volume ls -qf dangling=true)
-
-$ docker network ls
-$ docker network rm $(docker network ls -q)
+$ docker build -t=nethost/golang:1.9-ubuntu .
+$ docker push nethost/golang:1.9-ubuntu
+$ docker pull nethost/golang:1.9-ubuntu
 ```
