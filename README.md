@@ -21,7 +21,15 @@ $ docker pull nethost/golang:1.11-alpine
 ```
 
 ```
-$ docker build -t=nethost/golang:1.9-ubuntu .
-$ docker push nethost/golang:1.9-ubuntu
-$ docker pull nethost/golang:1.9-ubuntu
+$ docker build -t=nethost/golang:1.9-debian .
+$ docker push nethost/golang:1.9-debian
+$ docker pull nethost/golang:1.9-debian
+
+$ docker build -t=nethost/golang:1.10-debian .
+$ docker push nethost/golang:1.10-debian
+$ docker pull nethost/golang:1.10-debian
+
+$ docker build -t=nethost/golang:1.11-debian .
+$ docker push nethost/golang:1.11-debian
+$ docker pull nethost/golang:1.11-debian
 ```
